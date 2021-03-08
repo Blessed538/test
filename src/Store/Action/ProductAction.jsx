@@ -1,9 +1,9 @@
 import { GETPRODUCT, PUTPRODUCT } from './actionTypes';
 import { config } from './../../Utils/ApiRequest';
 
-export const getAllJobs = (cb) => async (dispatch) => {
+export const getAllProducts = (id) => async (dispatch) => {
   try {
-    const res = await config.fetchUrl('/jobs/all/get', 'GET');
+    const res = await config.fetchUrl('/jobs/all/get');
     if (res) {
       const { data } = res;
       dispatch({

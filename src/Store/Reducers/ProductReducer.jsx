@@ -1,8 +1,8 @@
-import { GETPRODUCT, PUTPRODUCT } from './../Action/actionTypes';
+import { GETPRODUCT, PUTPRODUCT, TRL } from './../Action/actionTypes';
 
 const initialState = {
-  user: null,
-
+  product: [],
+  trl: null,
   isLoading: false,
 };
 
@@ -12,11 +12,18 @@ export const productReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: true,
+        product: action.payload.data,
       };
     case PUTPRODUCT:
       return {
         ...state,
         isLoading: true,
+      };
+    case TRL:
+      return {
+        ...state,
+        isLoading: true,
+        trl: action.payload.data,
       };
 
     default:
