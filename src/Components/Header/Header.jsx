@@ -1,36 +1,34 @@
-import React from 'react';
+import {React,useState} from 'react';
 import './Header.css';
 
-const Header = () => {
+
+const Header = ({collapse, setCollapse}) => {
   return (
     <div>
       <div className="Header">
         <div className="Header__inner">
-          <div className="Header__sidebarTrigger">
-            <div className="SidebarTrigger">
-              <button className="SidebarTrigger__button">
-                <i className="icon-inno icon-inno_menu" />
-              </button>
-            </div>
-          </div>
-          <div className="Header__logo">
-            <div className="LogoLink">
+          <div className="d-flex justify-between align-center w-100">
+            <div className="">
               <a href="https://innoloft.com/public" className="LogoLink__link">
-                <img
+                <img width="100"
                   className="LogoDesktop LogoDesktop--header"
                   src="https://anvkgjjben.cloudimg.io/width/400/x/https://img.innoloft.de/innoloft-no-white-space.svg"
                   alt="logo"
                 />
               </a>
+
+            </div>
+
+            <div className="">
+                <span onClick={() => {setCollapse({value: !collapse.value})}} className="d-lg-none text-white ham">
+                                <img width="30" src="/hamburger.svg" alt="" className=""/>
+                </span>
             </div>
           </div>
 
-          <div className="Header__menu">
-            <nav className="HeaderUserMenu"></nav>
-          </div>
         </div>
       </div>
-      ;
+
     </div>
   );
 };

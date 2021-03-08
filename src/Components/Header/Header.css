@@ -3,7 +3,7 @@
   background: #272e71;
   box-shadow: 1px 1px 6px 0 rgb(0 0 0 / 20%);
   left: 0;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
   z-index: 10000;
@@ -20,6 +20,7 @@
   margin: 0 auto;
   max-width: 148rem;
   padding: 0 2rem;
+  height: 60px;
 }
 
 .Header__sidebarTrigger {
@@ -59,7 +60,7 @@
 
 .Header__logo {
   align-items: center;
-  display: none;
+  /* display: none; */
   justify-content: center;
   width: auto;
 }
